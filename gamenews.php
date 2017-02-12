@@ -9,7 +9,7 @@ if (isset($_REQUEST['id']))
 {
     try
     {
-        $db = new PDO('sqlite:db/openra.db');
+        $db = new PDO('sqlite:/var/www/masterdb/openra.db');
     
         $insert = $db->prepare("INSERT OR REPLACE INTO sysinfo ('system_id','updated','platform','os','x64','runtime','gl','windowsize','windowscale','lang','version','mod','modversion','sysinfoversion')
             VALUES (:system_id, :updated, :platform, :os, :x64, :runtime, :gl, :windowsize, :windowscale, :lang, :version, :mod, :modversion, :sysinfoversion)"

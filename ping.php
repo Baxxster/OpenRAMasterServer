@@ -77,7 +77,7 @@
         $game_mod = array_shift($version_arr);
         $version = implode('@', $version_arr);
 
-        $db = new PDO('sqlite:db/openra.db');
+        $db = new PDO('sqlite:/var/www/masterdb/openra.db');
 
         if ($_REQUEST['state'] == 2)
         {

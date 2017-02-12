@@ -9,7 +9,7 @@
 
     try
     {
-        $db = new PDO('sqlite:db/openra.db');
+        $db = new PDO('sqlite:/var/www/masterdb/openra.db');
         $query = $db->prepare('SELECT played_counter FROM map_stats WHERE map = :map');
         $query->bindValue(':map', $_REQUEST['hash'], PDO::PARAM_STR);
         $query->execute();

@@ -6,7 +6,7 @@
     $drop = False;
     try
     {
-        $db = new PDO('sqlite:db/openra.db');
+        $db = new PDO('sqlite:/var/www/masterdb/openra.db');
         echo "Connection to DB established.\n";
 
         if ($drop)
